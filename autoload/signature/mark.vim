@@ -295,8 +295,8 @@ function! signature#mark#GetList(mode, scope, ...)                              
     if (i =~# "[A-Z]")
       let [ l:buf, l:line, l:col, l:off ] = getpos( "'" . i )
       let l:marks_list = add(l:marks_list, [i, l:line, l:buf])
-    elseif (l:type !=? "global")
-      let l:marks_list = add(l:marks_list, [i, line("'" .i), l:buf_curr])
+    " elseif (l:type !=? "global")
+    "   let l:marks_list = add(l:marks_list, [i, line("'" .i), l:buf_curr])
     endif
   endfor
 
